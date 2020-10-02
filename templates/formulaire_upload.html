@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+{% block content %}
+<form>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Quel genre de musique souhaitez-vous ajouter?</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>Rock</option>
+      <option>Rap</option>
+      <option>Jazz</option>
+      <option>Metal</option>
+      <option>Folk Scandinave</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Séléctionnez un légende pour votre musique</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlFile1">Ajoutez votre musique</label>
+    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+  <button type="submit" href="/" class="btn btn-primary">Valider</button>
+</form>
+{% endblock %}

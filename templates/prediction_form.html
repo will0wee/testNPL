@@ -1,0 +1,18 @@
+{% extends 'prediction.html' %}
+{% block formulairePredic %}
+<form action="/prediction" method="POST">
+  <div class="form-group">
+    <label for="user_text">Entrez le texte à prédire</label>
+    <textarea class="form-control" id="user_text" name="user_text" rows="2"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Valider</button>
+</form>
+{% endblock %}
+
+{% block predic %}
+    {% if prediction == '1' %}
+        <label>C'est positif</label>
+    {% elif prediction == '0'%}
+        <label>C'est négatif</label>
+    {% endif %}
+{% endblock %}

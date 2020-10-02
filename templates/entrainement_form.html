@@ -1,0 +1,16 @@
+{% extends 'entrainement.html' %}
+{% block entrainementForm %}
+<form action="/entrainement" method="POST">
+    <div class="form-group">
+        <label for="fileTest">Ajoutez votre musique</label>
+        <input type="file" class="form-control-file" id="fileTest" name="fileTest">
+      </div>
+      <button type="submit" class="btn btn-primary">Valider</button>
+</form>
+{% endblock %}
+
+{% block score %}
+    {% if score != false %}
+        Votre score est de: {{score}}
+    {% endif %}
+{% endblock %}

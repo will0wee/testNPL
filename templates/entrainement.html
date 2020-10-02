@@ -1,0 +1,32 @@
+<html>
+  
+  <head>
+    <meta charset = "UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"/>
+  </head>
+  <body>
+    {% include 'header.html' %}
+
+    <div class="container">
+      <!--<br>
+      <form action = "/result" method = "POST">
+   <p>Text <input type = "text" name = "input_text" style="font-size:18pt;height:120px;width:200px;"/></p>
+   <p><input type = "submit" value = "submit" /></p>
+</form>-->
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+
+    <div class="content">
+      {% block entrainementForm %}
+      {% endblock %}
+    </div>
+    <div class="score">
+        {% block score %}
+        {% endblock %}
+        
+    </div>
+
+  </body>
+</html>
